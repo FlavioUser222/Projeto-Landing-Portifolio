@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    h1,
+    p {
+        color: white;
+
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .welcome-container {
+        width: 100%;
+        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .titulo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+        border-bottom: 2px solid grey;
+    }
+
+    .imagem-lateral img {
+        width: 100%;
+        max-width: 100%;
+        min-height: 500px;
+        object-fit: cover;
+    }
+
+    .tecnologias {
+        width: 100%;
+        max-width: 100%;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projetos {
+        width: 100%;
+        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projetos h1 {
+        text-align: center;
+    }
+
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+        margin-top: 50px;
+        align-items: flex-start;
+    }
+
+    .tecnologias>ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        list-style: none;
+        gap: 50px;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .tecnologias li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: white;
+    }
+
+
+    ul li img {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .card-projetos {
+        margin-top: 50px;
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid grey;
+    }
+
+    .card-projetos img {
+        width: 100%;
+        min-height: 200px;
+        object-fit: cover;
+    }
+
+    .container-projetos {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    @media screen and (max-width:800px) {
+        .welcome-container {
+            flex-direction: column-reverse;
+            justify-content: center;
+            gap: 50px;
+        }
+    }
+
+    header img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+
+    body.modoClaro {
+        background-color: white !important;
+    }
+
+    body.modoClaro h1,
+    body.modoClaro h2,
+    body.modoClaro p {
+        color: black !important;
+    }
+
+    body.modoClaro li img,
+    body.modoClaro header img {
+        filter: invert(0%) brightness(5%);
+    }
+
+    body.modoEscuro .sol img {
+        content: url("forma-de-meia-lua.png");
+    }
+</style>
+
+<body>
+
+    <header>
+        <h1>Portifólio</h1>
+        <div class="sol" onclick="mudarModo()">
+            <img src="brilho-do-sol.png" alt="">
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <div class="welcome-container">
+            <div class="titulo">
+                <h1>Flavio Eduardo</h1>
+                <p>Desenvolvedor Full-Stack | HTML/CSS | JavaScript | Node.js</p>
+                <ul>
+                    <li><a href=""><img src="icons8-linkedin.svg" alt="Linkedin"></a></li>
+                    <li><a href=""><img src="logotipo.png" alt="Github"></a></li>
+                </ul>
+            </div>
+
+            <div class="imagem-lateral">
+                <img src="solo-leveling-cinemas-capa.jpg" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="tecnologias">
+            <h1>Tecnologias</h1>
+
+            <ul>
+                <li>
+                    <h2>HTML</h2><img src="icons8-html.svg" alt="HTML">
+                </li>
+                <li>
+                    <h2>CSS</h2><img src="icons8-css.svg" alt="CSS">
+                </li>
+                <li>
+                    <h2>JAVA SCRIPT</h2><img src="icons8-javascript.svg" alt="JavaScript">
+                </li>
+                <li>
+                    <h2>NODE JS</h2><img src="icons8-nodejs-64.png" alt="Node JS">
+                </li>
+                <li>
+                    <h2>REACT</h2><img src="icons8-nativo-de-reagir.svg" alt="React">
+                </li>
+            </ul>
+        </div>
+
+        <div class="projetos">
+            <h1>Projetos</h1>
+            <div class="container-projetos">
+                <div class="card-projetos">
+                    <div class="img-projeto">
+                        <img src="solo-leveling-cinemas-capa.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h1>Nome do projeto</h1>
+                    </div>
+                </div>
+                <div class="card-projetos">
+                    <div class="img-projeto">
+                        <img src="solo-leveling-cinemas-capa.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h1>Nome do projeto</h1>
+                    </div>
+                </div>
+                <div class="card-projetos">
+                    <div class="img-projeto">
+                        <img src="solo-leveling-cinemas-capa.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h1>Nome do projeto</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        let modoClaro = false
+        let modoEscuro = true
+
+        function mudarModo() {
+            if (!modoClaro) {
+                document.body.classList.toggle('modoClaro')
+                modoEscuro = false
+            }
+            document.body.classList.toggle('modoEscuro')
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
