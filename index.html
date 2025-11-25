@@ -49,16 +49,23 @@
     header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
         padding: 20px;
         border-bottom: 2px solid grey;
+        position: relative;
+    }
+
+    header div {
+        position: absolute;
+        right: 30px;
+
     }
 
     .imagem-lateral img {
         width: 100%;
         max-width: 100%;
-        min-height: 500px;
+        min-height: 600px;
         object-fit: cover;
     }
 
@@ -95,7 +102,7 @@
 
     .tecnologias>ul {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         list-style: none;
         gap: 50px;
         align-items: center;
@@ -275,8 +282,20 @@
             }
             document.body.classList.toggle('modoEscuro')
 
-
         }
+
+        async function fetchData() {
+            try {
+                let res = await fetch('http://localhost:3000/projetos')
+                let dadosProjetos = await res.json()
+                console.log(dadosProjetos)
+
+            } catch (error) {
+                alert("Erro ao buscar dados")
+            }
+        }
+
+        fetchData()
 
 
 
