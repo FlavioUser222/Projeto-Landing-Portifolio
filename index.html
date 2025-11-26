@@ -45,10 +45,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
     }
 
     .titulo {
         width: 100%;
+        max-width: 70%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -77,8 +79,13 @@
     .imagem-lateral img {
         width: 100%;
         max-width: 100%;
-        min-height: 600px;
-        object-fit: cover;
+        min-height: 400px;
+    }
+
+    .imagem-lateral {
+        position: absolute;
+        right: 30px;
+        top: 100px;
     }
 
     .tecnologias {
@@ -150,6 +157,7 @@
         align-items: center;
         border: 1px solid grey;
         cursor: pointer;
+        border-radius: 5px;
         transition: 300ms ease-in;
     }
 
@@ -157,6 +165,7 @@
         width: 100%;
         min-height: 200px;
         object-fit: cover;
+        border-radius: 5px;
 
     }
 
@@ -169,23 +178,86 @@
         width: 100%;
     }
 
-    @media screen and (max-width:800px) {
+
+
+
+
+    @media screen and (max-width:1250px) {
         .welcome-container {
             flex-direction: column-reverse;
             justify-content: center;
             gap: 50px;
         }
 
-        .imagem-lateral img {
-            min-height: 400px;
+        .tecnologias>ul {
+            grid-template-columns: 1fr 1fr;
+            flex-wrap: wrap;
         }
+
+        .projetos {
+            margin-top: 60px;
+        }
+
+        .imagem-lateral {
+            position: absolute;
+            top: 0px;
+
+        }
+
+        .circle {
+            display: none;
+        }
+
+        .imagem-lateral {
+            position: relative;
+            right: 30px;
+
+        }
+
+    }
+
+    @media screen and (max-width:480px) {
+        .rings {
+            display: none;
+        }
+
+
     }
 
     .card-projetos:hover {
         scale: 1.05;
         border: 2px solid greenyellow;
-
     }
+
+    .shadow-dance-text {
+        font-size: 28px;
+        color: #fff;
+        text-shadow: 5px 5px 0 greenyellow, 10px 10px 0 #00d4ff;
+        animation: shadow-dance 5s infinite;
+    }
+
+    @keyframes shadow-dance {
+
+        0%,
+        100% {
+            text-shadow: 2px 2px 0 greenyellow, 2px 2px 0 #00d4ff;
+            font-weight: 600;
+        }
+
+        50% {
+            text-shadow: -2px -2px 0 #00d4ff, -2px -2px 0 greenyellow;
+            font-weight: 600;
+        }
+    }
+
+
+
+
+
+
+
+
+
 
     header img {
         width: 40px;
@@ -197,10 +269,21 @@
         background-color: white !important;
     }
 
+    body.modoClaro .circle,
+    body.modoClaro .rings,
+    body.modoClaro .frontend-mentor {
+        filter: invert(0%) brightness(5%);
+    }
+
     body.modoClaro h1,
     body.modoClaro h2,
     body.modoClaro p {
         color: black !important;
+    }
+
+    body.modoClaro header {
+        border-bottom: 2px solid grey;
+        background-color: rgb(0, 0, 0);
     }
 
     body.modoClaro li img,
@@ -215,6 +298,27 @@
     span {
         color: white;
     }
+
+    .rings {
+        position: absolute;
+        top: 20px;
+        left: 160px;
+        rotate: -30deg;
+        width: 250px;
+    }
+
+    .circle {
+        position: absolute;
+        left: 700px;
+        top: 10px;
+    }
+
+    .frontend-mentor {
+        position: absolute;
+        top: 50px;
+        left: 40px;
+        rotate: 50deg;
+    }
 </style>
 
 <body>
@@ -228,16 +332,19 @@
 
 
     <div class="container">
-
         <div class="welcome-container">
+            <img src="pattern-rings.svg" class="rings" alt="">
+            <img src="pattern-circle.svg" class="circle" alt="">
+            <img src="icon-frontend-mentor.svg" class="frontend-mentor" alt="">
+
             <div class="titulo">
                 <h1>Flavio Eduardo</h1>
-                <p>Desenvolvedor Full-Stack | HTML/CSS | JavaScript | Node.js</p>
+                <p class="shadow-dance-text">Desenvolvedor Full-Stack | HTML/CSS | JavaScript | Node.js</p>
                 <ul>
-                    <li><a href=""><img src="icons8-linkedin.svg" alt="Linkedin"></a></li>
-                    <li><a href=""><img src="logotipo.png" alt="Github"></a></li>
-                    <li><a href=""><img src="logotipo.png" alt="Whatsapp"></a></li>
-                    <li><a href=""><img src="logotipo.png" alt="Instagram"></a></li>
+                    <li><a href="" target="_blank"><img src="icons8-linkedin.svg" alt="Linkedin"></a></li>
+                    <li><a href="" target="_blank"><img src="logotipo.png" alt="Github"></a></li>
+                    <li><a href="" target="_blank"><img src="icons8-whatsapp-48.png" alt="Whatsapp"></a></li>
+                    <li><a href="" target="_blank"><img src="icons8-instagram-50.png" alt="Instagram"></a></li>
                 </ul>
             </div>
 
@@ -275,6 +382,10 @@
                 <li>
                     <h2>React Native</h2>
                     <img src="icons8-nativo-de-reagir.svg" alt="React">
+                </li>
+                <li>
+                    <h2>Express JS</h2>
+                    <img src="icons8-expresso-js-100.png" alt="Express js">
                 </li>
             </ul>
         </div>
