@@ -257,6 +257,7 @@
             <h1>Projetos</h1>
             <div class="container-projetos" id="containerProjetos">
                 <div class="card-projetos">
+
                     <div class="img-projeto">
                         <img src="solo-leveling-cinemas-capa.jpg" alt="">
                     </div>
@@ -287,22 +288,32 @@
         async function fetchData() {
 
 
+
+
+
             try {
                 let res = await fetch('http://localhost:3000/projetos')
                 let dadosProjetos = await res.json()
                 let containerProjetos = document.getElementById('containerProjetos')
+                let imagemurl = 'Gemini_Generated_Image_sd46azsd46azsd46.png'
 
                 dadosProjetos.forEach(projeto => {
                     let div = document.createElement('div')
+                    let divImg = document.createElement('div')
+                    let img = document.createElement('img')
+                    img.src = imagemurl
                     div.className = 'card-projetos'
                     let p = document.createElement('p')
                     let divText = document.createElement('div')
                     divText.className = 'card-text'
-
+                    let span = document.createElement('span')
+                    span.innerText = projeto.language
                     p.innerText = projeto.nome
 
+                    divImg.appendChild(img)
+                    div.appendChild(divImg)
+                    div.appendChild(span)
                     divText.appendChild(p)
-
                     div.appendChild(divText)
 
                     containerProjetos.appendChild(div)
