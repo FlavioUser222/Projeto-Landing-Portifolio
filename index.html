@@ -27,7 +27,6 @@
         flex-direction: column;
     }
 
-
     .welcome-container {
         width: 100%;
         max-width: 100%;
@@ -53,9 +52,13 @@
         justify-content: center;
         width: 100%;
         padding: 20px;
-        border-bottom: 2px solid grey;
+        border-bottom: 2px solid greenyellow;
         position: relative;
     }
+
+
+
+    
 
     header div {
         position: absolute;
@@ -244,7 +247,7 @@
 
         <div class="projetos">
             <h1>Projetos</h1>
-            <div class="container-projetos">
+            <div class="container-projetos" id="containerProjetos">
                 <div class="card-projetos">
                     <div class="img-projeto">
                         <img src="solo-leveling-cinemas-capa.jpg" alt="">
@@ -253,22 +256,7 @@
                         <h1>Nome do projeto</h1>
                     </div>
                 </div>
-                <div class="card-projetos">
-                    <div class="img-projeto">
-                        <img src="solo-leveling-cinemas-capa.jpg" alt="">
-                    </div>
-                    <div class="card-text">
-                        <h1>Nome do projeto</h1>
-                    </div>
-                </div>
-                <div class="card-projetos" id="card">
-                    <div class="img-projeto">
-                        <img src="solo-leveling-cinemas-capa.jpg" alt="">
-                    </div>
-                    <div class="card-text">
-                        <h1>Nome do projeto</h1>
-                    </div>
-                </div>
+
             </div>
         </div>
 
@@ -289,19 +277,27 @@
         }
 
         async function fetchData() {
+
+
             try {
                 let res = await fetch('http://localhost:3000/projetos')
                 let dadosProjetos = await res.json()
-                console.log(dadosProjetos)
+                let containerProjetos = document.getElementById('containerProjetos')
 
                 dadosProjetos.forEach(projeto => {
-
-                    let div = document.getElementById('card')
+                    let div = document.createElement('div')
+                    div.className = 'card-projetos'
                     let p = document.createElement('p')
+                    let divText = document.createElement('div')
+                    divText.className = 'card-text'
 
                     p.innerText = projeto.nome
 
-                    div.appendChild(p)
+                    divText.appendChild(p)
+
+                    div.appendChild(divText)
+
+                    containerProjetos.appendChild(div)
 
                 })
 
