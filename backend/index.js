@@ -30,7 +30,8 @@ app.get('/projetos', async (req, res) => {
     const repos = response.data.map(repo => ({
         nome: repo.name,
         url: repo.html_url,
-        descricao: repo.description
+        descricao: repo.description,
+        language:repo.language
     }))
 
     res.json(repos)
