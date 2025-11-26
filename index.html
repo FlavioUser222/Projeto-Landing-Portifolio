@@ -44,6 +44,7 @@
         align-items: center;
         justify-content: center;
         gap: 15px;
+        flex-wrap: wrap;
     }
 
     header {
@@ -159,6 +160,9 @@
             justify-content: center;
             gap: 50px;
         }
+
+
+
     }
 
     header img {
@@ -257,7 +261,7 @@
                         <h1>Nome do projeto</h1>
                     </div>
                 </div>
-                <div class="card-projetos">
+                <div class="card-projetos" id="card">
                     <div class="img-projeto">
                         <img src="solo-leveling-cinemas-capa.jpg" alt="">
                     </div>
@@ -289,6 +293,17 @@
                 let res = await fetch('http://localhost:3000/projetos')
                 let dadosProjetos = await res.json()
                 console.log(dadosProjetos)
+
+                dadosProjetos.forEach(projeto => {
+
+                    let div = document.getElementById('card')
+                    let p = document.createElement('p')
+
+                    p.innerText = projeto.nome
+
+                    div.appendChild(p)
+
+                })
 
             } catch (error) {
                 alert("Erro ao buscar dados")
