@@ -382,6 +382,15 @@
                     <h2>Fastify</h2>
                     <img src="fastify-icon-svgrepo-com.svg" alt="Fastify">
                 </li>
+                <li>
+                    <h2>Postgres</h2>
+                    <img src="icons8-postgresql-100.png" alt="Postgres">
+                </li>
+                <!-- 
+                <li>
+                    <h2>API Rest</h2>
+                    <img src="icons8-rest-api-100.png" alt="Api Rest">
+                </li> -->
             </ul>
         </div>
 
@@ -424,6 +433,12 @@
                     let span = document.createElement('span')
                     span.innerText = "Lang " + projeto.language
                     p.innerText = projeto.nome
+
+
+                    div.addEventListener('click', (ev) => {
+                        window.open(projeto.url, "_blank", "noopener");
+                    })
+
 
                     divImg.appendChild(img)
                     div.appendChild(divImg)
