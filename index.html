@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kedebideri:wght@400;500;600;700;800;900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Kedebideri", sans-serif;
+    }
+
+
     h1,
     p {
         color: white;
@@ -20,6 +30,7 @@
 
     p {
         font-size: 25px;
+        text-align: center;
     }
 
     .container {
@@ -57,9 +68,6 @@
     }
 
 
-
-
-
     header div {
         position: absolute;
         right: 30px;
@@ -76,11 +84,11 @@
     .tecnologias {
         width: 100%;
         max-width: 100%;
-        min-height: 80vh;
+        min-height: 70vh;
+        gap: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
     }
 
     .projetos {
@@ -107,11 +115,12 @@
 
     .tecnologias>ul {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+        margin: 0 auto;
         list-style: none;
-        gap: 50px;
+        gap: 30px;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         width: 100%;
         flex-wrap: wrap;
     }
@@ -129,7 +138,6 @@
         width: 60px;
         height: 60px;
     }
-
 
     .card-projetos {
         margin-top: 50px;
@@ -168,6 +176,9 @@
             gap: 50px;
         }
 
+        .imagem-lateral img {
+            min-height: 400px;
+        }
     }
 
     .card-projetos:hover {
@@ -200,6 +211,10 @@
     body.modoEscuro .sol img {
         content: url("forma-de-meia-lua.png");
     }
+
+    span {
+        color: white;
+    }
 </style>
 
 <body>
@@ -221,11 +236,13 @@
                 <ul>
                     <li><a href=""><img src="icons8-linkedin.svg" alt="Linkedin"></a></li>
                     <li><a href=""><img src="logotipo.png" alt="Github"></a></li>
+                    <li><a href=""><img src="logotipo.png" alt="Whatsapp"></a></li>
+                    <li><a href=""><img src="logotipo.png" alt="Instagram"></a></li>
                 </ul>
             </div>
 
             <div class="imagem-lateral">
-                <img src="solo-leveling-cinemas-capa.jpg" alt="">
+                <img src="unnamed-removebg-preview.png" alt="">
             </div>
 
         </div>
@@ -236,39 +253,36 @@
 
             <ul>
                 <li>
-                    <h2>HTML</h2><img src="icons8-html.svg" alt="HTML">
+                    <h2>HTML</h2>
+                    <img src="icons8-html.svg" alt="HTML">
                 </li>
                 <li>
-                    <h2>CSS</h2><img src="icons8-css.svg" alt="CSS">
+                    <h2>CSS</h2>
+                    <img src="icons8-css.svg" alt="CSS">
                 </li>
                 <li>
-                    <h2>JAVA SCRIPT</h2><img src="icons8-javascript.svg" alt="JavaScript">
+                    <h2>Java Script</h2>
+                    <img src="icons8-javascript.svg" alt="JavaScript">
                 </li>
                 <li>
-                    <h2>NODE JS</h2><img src="icons8-nodejs-64.png" alt="Node JS">
+                    <h2>Node JS</h2>
+                    <img src="icons8-nodejs-64.png" alt="Node JS">
                 </li>
                 <li>
-                    <h2>REACT</h2><img src="icons8-nativo-de-reagir.svg" alt="React">
+                    <h2>React</h2>
+                    <img src="icons8-nativo-de-reagir.svg" alt="React">
+                </li>
+                <li>
+                    <h2>React Native</h2>
+                    <img src="icons8-nativo-de-reagir.svg" alt="React">
                 </li>
             </ul>
         </div>
 
         <div class="projetos">
             <h1>Projetos</h1>
-            <div class="container-projetos" id="containerProjetos">
-                <div class="card-projetos">
-
-                    <div class="img-projeto">
-                        <img src="solo-leveling-cinemas-capa.jpg" alt="">
-                    </div>
-                    <div class="card-text">
-                        <h1>Nome do projeto</h1>
-                    </div>
-                </div>
-
-            </div>
+            <div class="container-projetos" id="containerProjetos"></div>
         </div>
-
 
     </div>
 
@@ -286,11 +300,6 @@
         }
 
         async function fetchData() {
-
-
-
-
-
             try {
                 let res = await fetch('http://localhost:3000/projetos')
                 let dadosProjetos = await res.json()
