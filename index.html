@@ -17,7 +17,6 @@
         font-family: "Kedebideri", sans-serif;
     }
 
-
     h1,
     p {
         color: white;
@@ -271,6 +270,11 @@
         filter: invert(0%) brightness(5%);
     }
 
+
+    body.modoClaro .card-projetos:hover {
+        border: 1px solid #00d4ff;
+    }
+
     body.modoClaro .container h1,
     body.modoClaro h2,
     body.modoClaro p {
@@ -278,7 +282,7 @@
     }
 
     body.modoClaro header {
-        border-bottom: 2px solid grey;
+        border-bottom: 2px solid #00d4ff;
         background-color: rgb(0, 0, 0);
     }
 
@@ -428,8 +432,9 @@
                 let dadosProjetos = await res.json()
                 let containerProjetos = document.getElementById('containerProjetos')
                 let imagemurl = 'Gemini_Generated_Image_sd46azsd46azsd46.png'
+                let imagensUrls = []
 
-                dadosProjetos.forEach(projeto => {
+                dadosProjetos.forEach((projeto, index) => {
                     let div = document.createElement('div')
                     let divImg = document.createElement('div')
                     let img = document.createElement('img')
