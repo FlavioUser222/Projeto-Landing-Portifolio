@@ -147,6 +147,8 @@ ul {
 }
 
 
+
+
 ul li img {
     width: 60px;
     height: 60px;
@@ -337,6 +339,7 @@ body.modoEscuro .sol img {
 
 span {
     color: white;
+
 }
 
 .rings {
