@@ -17,6 +17,10 @@
         font-family: "Kedebideri", sans-serif;
     }
 
+    body {
+        overflow-x: hidden;
+    }
+
     h1,
     p {
         color: white;
@@ -214,10 +218,7 @@
     }
 
     @media screen and (max-width:480px) {
-        .rings {
-            display: none;
-        }
-
+       
         .tecnologias {
             margin-top: 150px;
         }
@@ -227,7 +228,8 @@
             object-fit: cover;
             top: 0px;
         }
-        .tecnologias li{
+
+        .tecnologias li {
             height: 150px;
             align-items: center;
             text-align: center;
@@ -308,7 +310,7 @@
 
     .rings {
         position: absolute;
-        top: 20px;
+        top: 35px;
         left: 160px;
         rotate: -30deg;
         width: 250px;
@@ -352,8 +354,10 @@
                                 src="icons8-linkedin-100.png" alt="Linkedin"></a></li>
                     <li><a href="https://github.com/FlavioUser222" target="_blank"><img src="logotipo.png"
                                 alt="Github"></a></li>
-                    <li><a href="" target="_blank"><img src="icons8-whatsapp-48.png" alt="Whatsapp"></a></li>
-                    <li><a href="" target="_blank"><img src="icons8-instagram-50.png" alt="Instagram"></a></li>
+
+                    <li><a href="https://wa.me/5534996740980" target="_blank"><img src="icons8-whatsapp-48.png"
+                                alt="Whatsapp"></a></li>
+                    <li><a href="#" target="_blank"><img src="icons8-instagram-50.png" alt="Instagram"></a></li>
                 </ul>
             </div>
 
@@ -405,7 +409,7 @@
                     <img src="icons8-postgresql-100.png" alt="Postgres">
                 </li>
                 <li>
-                    <h2>Figma Design</h2>
+                    <h2>Figma</h2>
                     <img src="icons8-figma-100.png" alt="Figma">
                 </li>
                 <!-- 
@@ -436,21 +440,21 @@
         })
 
         ScrollReveal().reveal('.welcome-container', {
-            duration: 1000,
+            duration: 1200,
             distance: '40px',
-            origin: 'top',
+            origin: 'left',
             reset: true
         })
 
         ScrollReveal().reveal('.tecnologias', {
-            duration: 1000,
+            duration: 1200,
             distance: '40px',
             origin: 'left',
             reset: true
         })
 
         ScrollReveal().reveal('.projetos', {
-            duration: 1000,
+            duration: 1200,
             distance: '40px',
             origin: 'bottom',
             reset: false
@@ -476,6 +480,9 @@
                 let containerProjetos = document.getElementById('containerProjetos')
                 let imagemurl = 'Gemini_Generated_Image_sd46azsd46azsd46.png'
 
+                let imagensDosProjetos = []
+
+
                 dadosProjetos.forEach((projeto, index) => {
                     let div = document.createElement('div')
                     let divImg = document.createElement('div')
@@ -486,9 +493,9 @@
                     let divText = document.createElement('div')
                     divText.className = 'card-text'
                     let span = document.createElement('span')
-                    span.innerText = "Lang " + projeto.language
-                    p.innerText = projeto.nome
 
+                    span.innerText = projeto.language
+                    p.innerText = projeto.nome
 
                     div.addEventListener('click', (ev) => {
                         window.open(projeto.url, "_blank", "noopener");
