@@ -142,7 +142,7 @@ ul {
 }
 
 
-.titulo ul li{
+.titulo ul li {
     padding: 2px;
 }
 
@@ -267,8 +267,10 @@ ul li img {
 }
 
 
-
-
+.card-projetos:hover span {
+    width: 60%;
+    text-align: center;
+}
 
 
 .shadow-dance-text {
