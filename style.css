@@ -69,7 +69,6 @@ header {
     position: relative;
 }
 
-
 header div {
     position: absolute;
     right: 30px;
@@ -143,6 +142,13 @@ ul {
 }
 
 
+.titulo ul li{
+    padding: 5px;
+}
+
+
+
+
 ul li img {
     width: 60px;
     height: 60px;
@@ -177,8 +183,6 @@ ul li img {
     overflow: hidden;
 }
 
-
-
 .container-projetos {
     display: flex;
     flex-wrap: wrap;
@@ -187,7 +191,6 @@ ul li img {
     gap: 30px;
     width: 100%;
 }
-
 
 
 @media screen and (max-width:1260px) {
@@ -366,12 +369,14 @@ span {
     margin-top: 15px;
 }
 
-
 .titulo ul li:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
+    scale: 1.1;
     background-color: rgb(49, 243, 0);
     animation: teste 3s infinite;
+
+
 }
 
 .titulo li img:hover {
