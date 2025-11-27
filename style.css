@@ -268,8 +268,8 @@ ul li img {
 
 
 .card-projetos:hover span {
-    width: 60%;
-    text-align: center;
+    width: 150px;
+    text-align: start;
 }
 
 
