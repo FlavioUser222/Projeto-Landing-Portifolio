@@ -358,6 +358,36 @@
     }
 
 
+    .titulo ul li:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+        background-color: rgb(49, 243, 0);
+        animation: teste 2s infinite;
+    }
+
+    .titulo li img:hover {
+        filter: invert(0%) brightness(0%);
+    }
+
+    @keyframes teste {
+
+        0%,
+        100% {
+            background-color: #00d4ff;
+        }
+
+        50% {
+            background-color: greenyellow;
+
+        }
+    }
+
+
+
+
+
+
+
     p::first-letter {
         text-transform: capitalize;
     }
@@ -472,12 +502,20 @@
             reset: false
         })
 
-        ScrollReveal().reveal('.welcome-container', {
+        ScrollReveal().reveal('.titulo', {
             duration: 1200,
             distance: '40px',
             origin: 'left',
             reset: true
         })
+
+        ScrollReveal().reveal('.imagem-lateral', {
+            duration: 1200,
+            distance: '40px',
+            origin: 'right',
+            reset: true
+        })
+
 
         ScrollReveal().reveal('.tecnologias', {
             duration: 1200,
