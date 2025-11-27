@@ -190,6 +190,22 @@
                     let span = document.createElement('span')
 
                     span.innerText = projeto.language
+
+                    if (projeto.language == 'JavaScript') {
+                        span.style.borderBottom = '3px solid yellow'
+                        span.style.borderRadius = '3px'
+                    }
+
+                    else if (projeto.language == 'HTML') {
+                        span.style.borderBottom = '4px solid orange'
+                        span.style.borderRadius = '3px'
+                    }
+
+                    else if (projeto.language == 'CSS') {
+                        span.style.borderBottom = '4px solid purple'
+                        span.style.borderRadius = '3px'
+                    }
+
                     let nomeSemTraco = projeto.nome.replace(/[-]/g, "  ")
 
                     p.innerText = nomeSemTraco
