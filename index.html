@@ -413,7 +413,40 @@
 
     </div>
 
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
     <script>
+        ScrollReveal().reveal('.container', {
+            duration: 800,
+            distance: '40px',
+            origin: 'bottom',
+            reset: false
+        })
+
+        ScrollReveal().reveal('.titulo', {
+            duration: 1000,
+            distance: '40px',
+            origin: 'left',
+            reset: true
+        })
+
+        ScrollReveal().reveal('.tecnologias', {
+            duration: 1000,
+            distance: '40px',
+            origin: 'left',
+            reset: true
+        })
+
+        ScrollReveal().reveal('.projetos', {
+            duration: 1000,
+            distance: '40px',
+            origin: 'left',
+            reset: true
+        })
+
+
         let modoClaro = false
         let modoEscuro = true
 
