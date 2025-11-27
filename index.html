@@ -17,7 +17,6 @@
         font-family: "Kedebideri", sans-serif;
     }
 
-
     h1,
     p {
         color: white;
@@ -101,6 +100,7 @@
     .projetos {
         width: 100%;
         min-height: 100vh;
+        margin-top: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -180,8 +180,6 @@
 
 
 
-
-
     @media screen and (max-width:1260px) {
         .welcome-container {
             flex-direction: column-reverse;
@@ -195,13 +193,12 @@
         }
 
         .projetos {
-            margin-top: 60px;
+            margin-top: 100px;
         }
 
         .imagem-lateral {
             position: absolute;
             top: 0px;
-
         }
 
         .circle {
@@ -219,6 +216,16 @@
     @media screen and (max-width:480px) {
         .rings {
             display: none;
+        }
+
+        .tecnologias {
+            margin-top: 150px;
+        }
+
+        .imagem-lateral {
+            right: -10px;
+            object-fit: cover;
+            top: 0px;
         }
 
 
@@ -266,6 +273,11 @@
         filter: invert(0%) brightness(5%);
     }
 
+
+    body.modoClaro .card-projetos:hover {
+        border: 1px solid #00d4ff;
+    }
+
     body.modoClaro .container h1,
     body.modoClaro h2,
     body.modoClaro p {
@@ -273,7 +285,7 @@
     }
 
     body.modoClaro header {
-        border-bottom: 2px solid grey;
+        border-bottom: 2px solid #00d4ff;
         background-color: rgb(0, 0, 0);
     }
 
@@ -331,8 +343,10 @@
                 <h1>Flavio Eduardo</h1>
                 <p class="shadow-dance-text">Desenvolvedor Full-Stack | HTML/CSS | JavaScript | Node.js</p>
                 <ul>
-                    <li><a href="" target="_blank"><img src="icons8-linkedin-100.png" alt="Linkedin"></a></li>
-                    <li><a href="" target="_blank"><img src="logotipo.png" alt="Github"></a></li>
+                    <li><a href="https://www.linkedin.com/in/flavio-eduardo-a28977321/" target="_blank"><img
+                                src="icons8-linkedin-100.png" alt="Linkedin"></a></li>
+                    <li><a href="https://github.com/FlavioUser222" target="_blank"><img src="logotipo.png"
+                                alt="Github"></a></li>
                     <li><a href="" target="_blank"><img src="icons8-whatsapp-48.png" alt="Whatsapp"></a></li>
                     <li><a href="" target="_blank"><img src="icons8-instagram-50.png" alt="Instagram"></a></li>
                 </ul>
@@ -404,7 +418,40 @@
 
     </div>
 
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
     <script>
+        ScrollReveal().reveal('.container', {
+            duration: 800,
+            distance: '40px',
+            origin: 'bottom',
+            reset: false
+        })
+
+        ScrollReveal().reveal('.welcome-container', {
+            duration: 1000,
+            distance: '40px',
+            origin: 'top',
+            reset: true
+        })
+
+        ScrollReveal().reveal('.tecnologias', {
+            duration: 1000,
+            distance: '40px',
+            origin: 'left',
+            reset: true
+        })
+
+        ScrollReveal().reveal('.projetos', {
+            duration: 1000,
+            distance: '40px',
+            origin: 'bottom',
+            reset: false
+        })
+
+
         let modoClaro = false
         let modoEscuro = true
 
@@ -424,7 +471,7 @@
                 let containerProjetos = document.getElementById('containerProjetos')
                 let imagemurl = 'Gemini_Generated_Image_sd46azsd46azsd46.png'
 
-                dadosProjetos.forEach(projeto => {
+                dadosProjetos.forEach((projeto, index) => {
                     let div = document.createElement('div')
                     let divImg = document.createElement('div')
                     let img = document.createElement('img')
