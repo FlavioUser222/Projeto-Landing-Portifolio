@@ -147,8 +147,6 @@ ul {
 }
 
 
-
-
 ul li img {
     width: 60px;
     height: 60px;
@@ -269,7 +267,7 @@ ul li img {
 
 .card-projetos:hover span {
     width: 150px;
-    text-align: start;
+    text-align: center;
 }
 
 
