@@ -326,7 +326,7 @@
     }
 
     body.modoEscuro .sol img {
-        content: url("forma-de-meia-lua.png");
+        content: url("./imagens/forma-de-meia-lua.png");
     }
 
     span {
@@ -406,34 +406,34 @@
     <header>
         <h1>Portifólio</h1>
         <div class="sol" onclick="mudarModo()">
-            <img src="brilho-do-sol.png" alt="">
+            <img src="./imagens/brilho-do-sol.png" alt="">
         </div>
     </header>
 
 
     <div class="container">
         <div class="welcome-container">
-            <img src="pattern-rings.svg" class="rings" alt="">
-            <img src="pattern-circle.svg" class="circle" alt="">
-            <img src="icon-frontend-mentor.svg" class="frontend-mentor" alt="">
+            <img src="./imagens/pattern-rings.svg" class="rings" alt="">
+            <img src="./imagens/pattern-circle.svg" class="circle" alt="">
+            <img src="./imagens/icon-frontend-mentor.svg" class="frontend-mentor" alt="">
 
             <div class="titulo">
                 <h1>Flavio Eduardo</h1>
                 <p class="shadow-dance-text">Desenvolvedor Full-Stack | HTML/CSS | JavaScript | Node.js</p>
                 <ul>
                     <li><a href="https://www.linkedin.com/in/flavio-eduardo-a28977321/" target="_blank"><img
-                                src="icons8-linkedin-100.png" alt="Linkedin"></a></li>
-                    <li><a href="https://github.com/FlavioUser222" target="_blank"><img src="logotipo.png"
+                      src="./imagens/icons8-linkedin-100.png" alt="Linkedin"></a></li>
+                    <li><a href="https://github.com/FlavioUser222" target="_blank"><img src="./imagens/logotipo.png"
                                 alt="Github"></a></li>
 
-                    <li><a href="https://wa.me/5534996740980" target="_blank"><img src="icons8-whatsapp-48.png"
+                    <li><a href="https://wa.me/5534996740980" target="_blank"><img src="./imagens/icons8-whatsapp-48.png"
                                 alt="Whatsapp"></a></li>
-                    <li><a href="#" target="_blank"><img src="icons8-instagram-50.png" alt="Instagram"></a></li>
+                    <li><a href="#" target="_blank"><img src="./imagens/icons8-instagram-50.png" alt="Instagram"></a></li>
                 </ul>
             </div>
 
             <div class="imagem-lateral">
-                <img src="unnamed-removebg-preview.png" alt="">
+                <img src="./imagens/unnamed-removebg-preview.png" alt="">
             </div>
 
         </div>
@@ -441,52 +441,51 @@
 
         <div class="tecnologias">
             <h1>Tecnologias</h1>
-
             <ul>
                 <li>
                     <h2>HTML</h2>
-                    <img src="icons8-html.svg" alt="HTML">
+                    <img src="./imagens/icons8-html.svg" alt="HTML">
                 </li>
                 <li>
                     <h2>CSS</h2>
-                    <img src="icons8-css.svg" alt="CSS">
+                    <img src="./imagens/icons8-css.svg" alt="CSS">
                 </li>
                 <li>
                     <h2>Java Script</h2>
-                    <img src="icons8-javascript.svg" alt="JavaScript">
+                    <img src="./imagens/icons8-javascript.svg" alt="JavaScript">
                 </li>
                 <li>
                     <h2>Node JS</h2>
-                    <img src="icons8-nodejs-64.png" alt="Node JS">
+                    <img src="./imagens/icons8-nodejs-64.png" alt="Node JS">
                 </li>
                 <li>
                     <h2>React</h2>
-                    <img src="icons8-nativo-de-reagir.svg" alt="React">
+                    <img src="./imagens/icons8-nativo-de-reagir.svg" alt="React">
                 </li>
                 <li>
                     <h2>React Native</h2>
-                    <img src="icons8-nativo-de-reagir.svg" alt="React">
+                    <img src="./imagens/icons8-nativo-de-reagir.svg" alt="React">
                 </li>
                 <li>
                     <h2>Express JS</h2>
-                    <img src="icons8-expresso-js-100.png" alt="Express">
+                    <img src="./imagens/icons8-expresso-js-100.png" alt="Express">
                 </li>
                 <li>
                     <h2>Fastify</h2>
-                    <img src="fastify-icon-svgrepo-com.svg" alt="Fastify">
+                    <img src="./imagens/fastify-icon-svgrepo-com.svg" alt="Fastify">
                 </li>
                 <li>
                     <h2>Postgres</h2>
-                    <img src="icons8-postgresql-100.png" alt="Postgres">
+                    <img src="./imagens/icons8-postgresql-100.png" alt="Postgres">
                 </li>
                 <li>
                     <h2>Figma</h2>
-                    <img src="icons8-figma-100.png" alt="Figma">
+                    <img src="./imagens/icons8-figma-100.png" alt="Figma">
                 </li>
                 <!-- 
                 <li>
                     <h2>API Rest</h2>
-                    <img src="icons8-rest-api-100.png" alt="Api Rest">
+                    <img src="./imagens/icons8-rest-api-100.png" alt="Api Rest">
                 </li> -->
             </ul>
         </div>
@@ -557,9 +556,9 @@
                 let res = await fetch('https://projeto-landing-portifolio.onrender.com/projetos')
                 let dadosProjetos = await res.json()
                 let containerProjetos = document.getElementById('containerProjetos')
-                let imagemurl = 'Gemini_Generated_Image_sd46azsd46azsd46.png'
+                let imagemurl = './imagens/Gemini_Generated_Image_sd46azsd46azsd46.png'
 
-                let imagensDosProjetos = ['Gemini_Generated_Image_9yyn1w9yyn1w9yyn.png', 'Gemini_Generated_Image_uzpd6uzpd6uzpd6u.png', , 'Gemini_Generated_Image_ask29bask29bask2.png']
+                let imagensDosProjetos = ['./imagens/Gemini_Generated_Image_9yyn1w9yyn1w9yyn.png', './imagens/Gemini_Generated_Image_uzpd6uzpd6uzpd6u.png', , './imagens/Gemini_Generated_Image_ask29bask29bask2.png']
 
 
                 dadosProjetos.forEach((projeto, index) => {
