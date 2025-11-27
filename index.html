@@ -155,7 +155,7 @@
         width: 100%;
         max-width: 300px;
         padding: 10px;
-        min-height: 300px;
+        min-height: 350px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -218,7 +218,7 @@
     }
 
     @media screen and (max-width:480px) {
-       
+
         .tecnologias {
             margin-top: 150px;
         }
@@ -327,6 +327,21 @@
         top: 50px;
         left: 40px;
         rotate: 50deg;
+    }
+
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card-text span {
+        letter-spacing: 1.5;
+    }
+
+    p::first-letter {
+        text-transform: capitalize;
     }
 </style>
 
@@ -495,7 +510,9 @@
                     let span = document.createElement('span')
 
                     span.innerText = projeto.language
-                    p.innerText = projeto.nome
+                    let nomeSemTraco = projeto.nome.replace(/[-]/g, "  ")
+
+                    p.innerText = nomeSemTraco
 
                     div.addEventListener('click', (ev) => {
                         window.open(projeto.url, "_blank", "noopener");
@@ -504,7 +521,7 @@
 
                     divImg.appendChild(img)
                     div.appendChild(divImg)
-                    div.appendChild(span)
+                    divText.appendChild(span)
                     divText.appendChild(p)
                     div.appendChild(divText)
 
