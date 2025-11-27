@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons8-portfolio-60.png" type="image/x-icon">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Kedebideri:wght@400;500;600;700;800;900&display=swap');
@@ -243,6 +244,17 @@
             text-align: center;
         }
 
+    }
+
+    @media screen and (max-width:375px) {
+
+        .rings {
+            display: none;
+        }
+
+        .imagem-lateral {
+            object-fit: fill;
+        }
 
     }
 
@@ -362,7 +374,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: 10px;
         background-color: rgb(49, 243, 0);
-        animation: teste 2s infinite;
+        animation: teste 3s infinite;
     }
 
     .titulo li img:hover {
@@ -381,10 +393,6 @@
 
         }
     }
-
-
-
-
 
 
 
@@ -551,7 +559,7 @@
                 let containerProjetos = document.getElementById('containerProjetos')
                 let imagemurl = 'Gemini_Generated_Image_sd46azsd46azsd46.png'
 
-                let imagensDosProjetos = ['Gemini_Generated_Image_9yyn1w9yyn1w9yyn.png']
+                let imagensDosProjetos = ['Gemini_Generated_Image_9yyn1w9yyn1w9yyn.png', 'Gemini_Generated_Image_uzpd6uzpd6uzpd6u.png', , 'Gemini_Generated_Image_ask29bask29bask2.png']
 
 
                 dadosProjetos.forEach((projeto, index) => {
