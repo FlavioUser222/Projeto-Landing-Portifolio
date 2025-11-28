@@ -154,15 +154,28 @@
         })
 
 
-        let modoClaro = false
-        let modoEscuro = true
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let tema = localStorage.getItem('tema')
+
+            if (tema === 'modoClaro') {
+                document.body.classList.add('modoClaro')
+            }
+            else {
+                document.body.classList.add('modoEscuro')
+            }
+        })
 
         function mudarModo() {
-            if (!modoClaro) {
-                document.body.classList.toggle('modoClaro')
-                modoEscuro = false
+            if (document.body.classList.contains('modoEscuro')) {
+                document.body.classList.remove('modoEscuro')
+                document.body.classList.add('modoClaro')
+                localStorage.setItem('tema', 'modoClaro')
+            } else {
+                document.body.classList.remove('modoClaro')
+                document.body.classList.add('modoEscuro')
+                localStorage.setItem('tema', 'modoEscuro')
             }
-            document.body.classList.toggle('modoEscuro')
 
         }
 
