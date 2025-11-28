@@ -268,8 +268,7 @@ ul li img {
 
 
 .card-projetos:hover span {
-    width: 150px;
-    text-align: center;
+    width: 160px;
 }
 
 
@@ -339,7 +338,11 @@ body.modoEscuro .sol img {
 
 span {
     color: white;
-
+    transition: all 0.8s ease-in-out;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
 }
 
 .rings {
